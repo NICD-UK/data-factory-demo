@@ -1,0 +1,108 @@
+{
+	"name": "AzureBlob1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "TestDF",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "height",
+				"type": "String"
+			},
+			{
+				"name": "mass",
+				"type": "String"
+			},
+			{
+				"name": "hair_color",
+				"type": "String"
+			},
+			{
+				"name": "skin_color",
+				"type": "String"
+			},
+			{
+				"name": "eye_color",
+				"type": "String"
+			},
+			{
+				"name": "birth_year",
+				"type": "String"
+			},
+			{
+				"name": "gender",
+				"type": "String"
+			},
+			{
+				"name": "homeworld",
+				"type": "String"
+			},
+			{
+				"name": "films",
+				"type": "String"
+			},
+			{
+				"name": "species",
+				"type": "String"
+			},
+			{
+				"name": "vehicles",
+				"type": "String"
+			},
+			{
+				"name": "starships",
+				"type": "String"
+			},
+			{
+				"name": "created",
+				"type": "String"
+			},
+			{
+				"name": "edited",
+				"type": "String"
+			},
+			{
+				"name": "url",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "JsonFormat",
+				"filePattern": "arrayOfObjects",
+				"jsonNodeReference": "$.['results']",
+				"jsonPathDefinition": {
+					"count": "$.['count']",
+					"next": "$.['next']",
+					"previous": "$.['previous']",
+					"results": "$.['results']",
+					"name": "['name']",
+					"height": "['height']",
+					"mass": "['mass']",
+					"hair_color": "['hair_color']",
+					"skin_color": "['skin_color']",
+					"eye_color": "['eye_color']",
+					"birth_year": "['birth_year']",
+					"gender": "['gender']",
+					"homeworld": "['homeworld']",
+					"films": "['films']",
+					"species": "['species']",
+					"vehicles": "['vehicles']",
+					"starships": "['starships']",
+					"created": "['created']",
+					"edited": "['edited']",
+					"url": "['url']"
+				}
+			},
+			"fileName": "",
+			"folderPath": "pg-df-demo/raw"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,36 @@
+{
+	"name": "AzureTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "pgdfdemoTableStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureTable",
+		"structure": [
+			{
+				"name": "PartitionKey",
+				"type": "String"
+			},
+			{
+				"name": "RowKey",
+				"type": "String"
+			},
+			{
+				"name": "Timestamp",
+				"type": "DateTimeOffset"
+			},
+			{
+				"name": "height",
+				"type": "Double"
+			},
+			{
+				"name": "name",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "pgdfdemo"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

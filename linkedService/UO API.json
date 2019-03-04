@@ -1,0 +1,12 @@
+{
+	"name": "UO API",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://swapi.co/api/people",
+			"enableServerCertificateValidation": false,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
